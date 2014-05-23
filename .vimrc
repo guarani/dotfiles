@@ -11,6 +11,8 @@ set hlsearch
 " Removes highlight from search results when enter is pressed
 :nnoremap <CR> :nohlsearch<CR><CR>
 
+" Test comment
+
 " Remove sounds
 set noerrorbells
 set novisualbell
