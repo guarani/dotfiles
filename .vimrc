@@ -12,7 +12,7 @@ set hlsearch
 :nnoremap <CR> :nohlsearch<CR><CR>
 
 " Test comment
-
+" Second itestcomment
 " Remove sounds
 set noerrorbells
 set novisualbell
