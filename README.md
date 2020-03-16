@@ -3,7 +3,7 @@
 Clone the repo:
 
 ```
-git clone https://github.com/guarani/dotfiles/.git ~/.dotfiles
+git clone git@github.com:guarani/dotfiles.git ~/.dotfiles
 ```
 
 ### vimrc
