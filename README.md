@@ -1,10 +1,17 @@
+### Instalation
+
+Clone the repo:
+
+```
+git clone https://github.com/guarani/dotfiles/.git ~/.dotfiles
+```
+
 ### vimrc
 
 Usage:
 
 ```
-git clone https://github.com/guarani/vimrc.git ~/.vimrc-repo
-ln -s ~/.vimrc-repo/.vimrc ~/.vimrc
+ln -s ~/.dotfiles/.vimrc ~/.vimrc
 ```
 
 That's it!
