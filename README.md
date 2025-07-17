@@ -4,11 +4,7 @@ Simple dotfiles setup for new machines.
 
 ## What gets installed
 
-- Python 3.x
-- Tree command line tool  
-- LibreOffice
-- Vim configuration
-- Zsh configuration
+Everything in the Brewfile
 
 ## Installation
 
@@ -16,16 +12,25 @@ Simple dotfiles setup for new machines.
 # Clone dotfiles
 git clone git@github.com:guarani/dotfiles.git ~/.dotfiles
 
-# Install tools via Homebrew
+# Complete setup
 cd ~/.dotfiles
-brew bundle install
+make setup
+```
 
-# Link configs
-ln -s ~/.dotfiles/.zshrc ~/.zshrc
-ln -s ~/.dotfiles/.vimrc ~/.vimrc
+## Package Management
 
-# Reload shell
-source ~/.zshrc
+```bash
+# Install packages only
+make install
+
+# Remove packages not in Brewfile
+make clean
+
+# Force remove + reinstall everything  
+make reset
+
+# Force remove everything in the Brewfile
+make nuke
 ```
 
 That's it!
