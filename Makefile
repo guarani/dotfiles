@@ -1,6 +1,7 @@
 .PHONY: install clean reset nuke setup
 
 install:
+	@command -v brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	brew bundle install
 
 clean:
