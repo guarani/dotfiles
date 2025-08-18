@@ -1,7 +1,8 @@
 .PHONY: install clean reset nuke setup
 
 install:
-	@command -v brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	@# Escape command substitution so make does not expand curl
+	@command -v brew >/dev/null 2>&1 || /bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	@eval "$$(brew --prefix)/bin/brew shellenv" && brew bundle install
 
 clean:
@@ -18,5 +19,5 @@ nuke:
 
 setup: install
 	ln -sf ~/.dotfiles/.zshrc ~/.zshrc
-	ln -sf ~/.dotfiles/.vimrc ~/.vimrc 
-	source ~/.zshrc
+	ln -sf ~/.dotfiles/.vimrc ~/.vimrc
+	. ~/.zshrc
