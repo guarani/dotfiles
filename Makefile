@@ -2,7 +2,9 @@
 
 install:
 	@command -v brew >/dev/null 2>&1 || /bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-	@eval "$$(brew --prefix)/bin/brew shellenv" && brew bundle install
+	@eval "$$(/opt/homebrew/bin/brew shellenv)"
+	@echo 'eval "$$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+	@brew bundle install
 
 clean:
 	brew bundle cleanup
