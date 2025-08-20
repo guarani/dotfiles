@@ -4,3 +4,5 @@ brew "tree"
 brew "rbenv"
 brew "git"
 brew "gh"
+
+cask "db-browser-for-sqlite"
