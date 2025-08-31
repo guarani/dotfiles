@@ -4,5 +4,6 @@ brew "tree"
 brew "rbenv"
 brew "git"
 brew "gh"
+brew "fastlane"
 
 cask "db-browser-for-sqlite"
